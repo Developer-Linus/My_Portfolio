@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Portfolio</a>
+            <a class="navbar-brand" href="./index.html">Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -21,6 +21,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#skills">Skills</a>
@@ -47,6 +50,9 @@
                     </div>
                     <a href="#about" class="btn btn-outline-light btn-lg">
                         Learn More <i class="bi bi-chevron-down ms-2"></i>
+                    </a>
+                    <a href="/path/to/your-cv.pdf" class="btn btn-light btn-lg" download>
+                        Download CV <i class="bi bi-download ms-2"></i>
                     </a>
                 </div>
             </div>
@@ -84,51 +90,141 @@
     <section id="projects" class="section-padding bg-light">
         <div class="container">
             <h2 class="text-center mb-5">Featured Projects</h2>
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="card project-card h-100">
-                        <img src="https://images.unsplash.com/photo-1555099652-4c6f474a5831?w=800&auto=format&fit=crop&q=80" 
-                             class="card-img-top" alt="Project preview">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">A brief description of the project and the technologies used.</p>
-                            <a href="#" class="btn btn-outline-primary">
-                                View Project <i class="bi bi-box-arrow-up-right ms-2"></i>
-                            </a>
+            
+            <!-- Project Categories -->
+            <ul class="nav nav-pills justify-content-center mb-5" id="projectTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#all" type="button">All</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#web" type="button">Web Development</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#mobile" type="button">Mobile Apps</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#cloud" type="button">Cloud Solutions</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="projectTabContent">
+                <!-- All Projects -->
+                <div class="tab-pane fade show active" id="all">
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="card project-card h-100">
+                                <img src="https://images.unsplash.com/photo-1555099652-4c6f474a5831?w=800&auto=format&fit=crop&q=80" 
+                                     class="card-img-top" alt="Project preview">
+                                <div class="card-body">
+                                    <span class="badge bg-primary mb-2">Web Development</span>
+                                    <h5 class="card-title">E-commerce Platform</h5>
+                                    <p class="card-text">A full-stack e-commerce solution built with React and Node.js.</p>
+                                    <a href="#" class="btn btn-outline-primary">
+                                        View Project <i class="bi bi-box-arrow-up-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card project-card h-100">
+                                <img src="https://images.unsplash.com/photo-1537884944318-390069bb8665?w=800&auto=format&fit=crop&q=80" 
+                                     class="card-img-top" alt="Project preview">
+                                <div class="card-body">
+                                    <span class="badge bg-success mb-2">Mobile Development</span>
+                                    <h5 class="card-title">Fitness Tracker App</h5>
+                                    <p class="card-text">A cross-platform mobile app built with Flutter.</p>
+                                    <a href="#" class="btn btn-outline-primary">
+                                        View Project <i class="bi bi-box-arrow-up-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card project-card h-100">
+                                <img src="https://images.unsplash.com/photo-1562907550-2240ad87f003?w=800&auto=format&fit=crop&q=80" 
+                                     class="card-img-top" alt="Project preview">
+                                <div class="card-body">
+                                    <span class="badge bg-info mb-2">Cloud Architecture</span>
+                                    <h5 class="card-title">Serverless API</h5>
+                                    <p class="card-text">A scalable API built with AWS Lambda and API Gateway.</p>
+                                    <a href="#" class="btn btn-outline-primary">
+                                        View Project <i class="bi bi-box-arrow-up-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card project-card h-100">
-                        <img src="https://images.unsplash.com/photo-1537884944318-390069bb8665?w=800&auto=format&fit=crop&q=80" 
-                             class="card-img-top" alt="Project preview">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">A brief description of the project and the technologies used.</p>
-                            <a href="#" class="btn btn-outline-primary">
-                                View Project <i class="bi bi-box-arrow-up-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
+
+                <!-- Web Development Projects -->
+                <div class="tab-pane fade" id="web">
+                    <!-- Add web development projects here -->
                 </div>
-                <div class="col-lg-4">
-                    <div class="card project-card h-100">
-                        <img src="https://images.unsplash.com/photo-1562907550-2240ad87f003?w=800&auto=format&fit=crop&q=80" 
-                             class="card-img-top" alt="Project preview">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">A brief description of the project and the technologies used.</p>
-                            <a href="#" class="btn btn-outline-primary">
-                                View Project <i class="bi bi-box-arrow-up-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
+
+                <!-- Mobile App Projects -->
+                <div class="tab-pane fade" id="mobile">
+                    <!-- Add mobile app projects here -->
+                </div>
+
+                <!-- Cloud Solution Projects -->
+                <div class="tab-pane fade" id="cloud">
+                    <!-- Add cloud solution projects here -->
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section-padding">
+    <section id="blog" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Latest Blog Posts</h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&auto=format&fit=crop&q=80" 
+                             class="card-img-top" alt="Blog post image">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="text-muted"><i class="bi bi-calendar me-2"></i>March 15, 2024</span>
+                            </div>
+                            <h5 class="card-title">Getting Started with Web Development</h5>
+                            <p class="card-text">A comprehensive guide for beginners looking to start their web development journey.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4">
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop&q=80" 
+                             class="card-img-top" alt="Blog post image">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="text-muted"><i class="bi bi-calendar me-2"></i>March 10, 2024</span>
+                            </div>
+                            <h5 class="card-title">Modern JavaScript Features</h5>
+                            <p class="card-text">Exploring the latest features in JavaScript and how to use them effectively.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4">
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop&q=80" 
+                             class="card-img-top" alt="Blog post image">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="text-muted"><i class="bi bi-calendar me-2"></i>March 5, 2024</span>
+                            </div>
+                            <h5 class="card-title">Cloud Computing Basics</h5>
+                            <p class="card-text">Understanding the fundamentals of cloud computing and its applications.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-padding bg-light">
         <div class="container">
             <h2 class="text-center mb-5">Skills & Technologies</h2>
             <div class="row g-3">
@@ -176,7 +272,7 @@
         </div>
     </section>
 
-    <section id="contact" class="section-padding bg-light">
+    <section id="contact" class="section-padding">
         <div class="container">
             <h2 class="text-center mb-5">Get In Touch</h2>
             <div class="row justify-content-center">
