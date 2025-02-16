@@ -85,13 +85,63 @@ body {
 }
 
 /* Project categories */
+#projectTabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 -4px;
+  padding: 0 1rem;
+}
+
+#projectTabs .nav-item {
+  padding: 4px;
+  flex: 0 1 auto;
+  min-width: calc(50% - 8px);
+  max-width: calc(50% - 8px);
+}
+
 #projectTabs .nav-link {
   color: var(--text-color) !important;
   border-radius: 20px;
-  padding: 0.5rem 1.5rem !important;
-  margin: 0 0.5rem;
+  padding: 0.5rem 0.75rem !important;
   background-color: transparent;
   border: 2px solid var(--secondary-color);
+  white-space: nowrap;
+  width: 100%;
+  font-size: 0.875rem;
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  #projectTabs {
+    gap: 12px;
+    margin: 0 -6px;
+  }
+  
+  #projectTabs .nav-item {
+    padding: 6px;
+    min-width: auto;
+    max-width: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #projectTabs {
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  #projectTabs .nav-item {
+    padding: 0;
+  }
+
+  #projectTabs .nav-link {
+    padding: 0.5rem 1.5rem !important;
+    font-size: 1rem;
+  }
 }
 
 #projectTabs .nav-link:hover,
@@ -181,4 +231,56 @@ body {
 .btn-outline-primary:hover {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
+}
+
+/* Enhanced Blog styles */
+.blog-sidebar {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.widget-title {
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.widget-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.category-list li,
+.archive-list li {
+    margin-bottom: 0.5rem;
+}
+
+.category-list a,
+.archive-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.category-list a:hover,
+.archive-list a:hover {
+    color: var(--secondary-color);
+}
+
+.badge {
+    transition: all 0.3s ease;
+}
+
+.category-list a:hover .badge,
+.archive-list a:hover .badge {
+    background-color: var(--secondary-color) !important;
 }

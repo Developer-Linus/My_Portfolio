@@ -178,47 +178,90 @@
         <div class="container">
             <h2 class="text-center mb-5">Latest Blog Posts</h2>
             <div class="row g-4">
-                <div class="col-lg-4">
-                    <article class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&auto=format&fit=crop&q=80" 
-                             class="card-img-top" alt="Blog post image">
-                        <div class="card-body">
-                            <div class="blog-meta mb-2">
-                                <span class="text-muted"><i class="bi bi-calendar me-2"></i>March 15, 2024</span>
-                            </div>
-                            <h5 class="card-title">Getting Started with Web Development</h5>
-                            <p class="card-text">A comprehensive guide for beginners looking to start their web development journey.</p>
-                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                <!-- Featured blog posts -->
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <article class="blog-card">
+                                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&auto=format&fit=crop&q=80" 
+                                     class="card-img-top" alt="Blog post image">
+                                <div class="card-body">
+                                    <div class="blog-meta mb-2">
+                                        <span class="text-muted"><i class="bi bi-calendar me-2"></i>March 15, 2024</span>
+                                        <span class="text-muted ms-3"><i class="bi bi-tag me-2"></i>Web Development</span>
+                                    </div>
+                                    <h5 class="card-title">Getting Started with Web Development</h5>
+                                    <p class="card-text">A comprehensive guide for beginners looking to start their web development journey.</p>
+                                    <a href="https://dev.to/yourusername/getting-started-with-web-development" class="btn btn-outline-primary" target="_blank">Read More</a>
+                                </div>
+                            </article>
                         </div>
-                    </article>
+                        <div class="col-md-6">
+                            <article class="blog-card">
+                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop&q=80" 
+                                     class="card-img-top" alt="Blog post image">
+                                <div class="card-body">
+                                    <div class="blog-meta mb-2">
+                                        <span class="text-muted"><i class="bi bi-calendar me-2"></i>March 10, 2024</span>
+                                        <span class="text-muted ms-3"><i class="bi bi-tag me-2"></i>JavaScript</span>
+                                    </div>
+                                    <h5 class="card-title">Modern JavaScript Features</h5>
+                                    <p class="card-text">Exploring the latest features in JavaScript and how to use them effectively.</p>
+                                    <a href="https://dev.to/yourusername/modern-javascript-features" class="btn btn-outline-primary" target="_blank">Read More</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Blog sidebar with categories and archive -->
                 <div class="col-lg-4">
-                    <article class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop&q=80" 
-                             class="card-img-top" alt="Blog post image">
-                        <div class="card-body">
-                            <div class="blog-meta mb-2">
-                                <span class="text-muted"><i class="bi bi-calendar me-2"></i>March 10, 2024</span>
-                            </div>
-                            <h5 class="card-title">Modern JavaScript Features</h5>
-                            <p class="card-text">Exploring the latest features in JavaScript and how to use them effectively.</p>
-                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                    <div class="blog-sidebar">
+                        <!-- Categories -->
+                        <div class="sidebar-widget mb-4">
+                            <h5 class="widget-title">Categories</h5>
+                            <ul class="list-unstyled category-list">
+                                <li><a href="https://dev.to/t/webdev" class="d-flex justify-content-between align-items-center">
+                                    Web Development
+                                    <span class="badge bg-secondary rounded-pill">12</span>
+                                </a></li>
+                                <li><a href="https://dev.to/t/javascript" class="d-flex justify-content-between align-items-center">
+                                    JavaScript
+                                    <span class="badge bg-secondary rounded-pill">8</span>
+                                </a></li>
+                                <li><a href="https://dev.to/t/cloud" class="d-flex justify-content-between align-items-center">
+                                    Cloud Computing
+                                    <span class="badge bg-secondary rounded-pill">5</span>
+                                </a></li>
+                            </ul>
                         </div>
-                    </article>
-                </div>
-                <div class="col-lg-4">
-                    <article class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop&q=80" 
-                             class="card-img-top" alt="Blog post image">
-                        <div class="card-body">
-                            <div class="blog-meta mb-2">
-                                <span class="text-muted"><i class="bi bi-calendar me-2"></i>March 5, 2024</span>
-                            </div>
-                            <h5 class="card-title">Cloud Computing Basics</h5>
-                            <p class="card-text">Understanding the fundamentals of cloud computing and its applications.</p>
-                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        
+                        <!-- Archive -->
+                        <div class="sidebar-widget">
+                            <h5 class="widget-title">Archive</h5>
+                            <ul class="list-unstyled archive-list">
+                                <li><a href="https://dev.to/yourusername?time=mar-2024" class="d-flex justify-content-between align-items-center">
+                                    March 2024
+                                    <span class="badge bg-secondary rounded-pill">3</span>
+                                </a></li>
+                                <li><a href="https://dev.to/yourusername?time=feb-2024" class="d-flex justify-content-between align-items-center">
+                                    February 2024
+                                    <span class="badge bg-secondary rounded-pill">4</span>
+                                </a></li>
+                                <li><a href="https://dev.to/yourusername?time=jan-2024" class="d-flex justify-content-between align-items-center">
+                                    January 2024
+                                    <span class="badge bg-secondary rounded-pill">5</span>
+                                </a></li>
+                            </ul>
                         </div>
-                    </article>
+                        
+                        <!-- View all posts button -->
+                        <div class="text-center mt-4">
+                            <a href="https://dev.to/yourusername" class="btn btn-primary w-100" target="_blank">
+                                View All Posts <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -305,17 +348,42 @@
         // Add background to navbar when menu is expanded
         const navbar = document.querySelector('.navbar');
         const navbarCollapse = document.querySelector('.navbar-collapse');
-        
+        const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link'); // Select all navbar links
+    
+        // Function to close the navbar collapse
+        function closeNavbar() {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+            });
+            bsCollapse.hide();
+        }
+    
+        // Close navbar when a link is clicked
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeNavbar();
+            });
+        });
+    
+        // Close navbar when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!navbar.contains(event.target) && navbarCollapse.classList.contains('show')) {
+                closeNavbar();
+            }
+        });
+    
+        // Add background to navbar when menu is expanded
         navbarCollapse.addEventListener('show.bs.collapse', function () {
             navbar.classList.add('scrolled');
         });
-        
+    
+        // Remove background when menu is hidden and page is at the top
         navbarCollapse.addEventListener('hidden.bs.collapse', function () {
             if (window.scrollY === 0) {
                 navbar.classList.remove('scrolled');
             }
         });
-
+    
         // Add background to navbar on scroll
         window.addEventListener('scroll', function() {
             if (window.scrollY > 50) {
